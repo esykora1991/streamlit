@@ -55,7 +55,8 @@ def _parse_date_value(value: DateValue) -> Tuple[List[date], bool]:
     range_value: bool = False
     if value is None:
         # Set value default.
-        parsed_dates = [datetime.now().date()]
+        parsed_dates = None
+        #parsed_dates = [datetime.now().date()]
     elif isinstance(value, datetime):
         parsed_dates = [value.date()]
     elif isinstance(value, date):
